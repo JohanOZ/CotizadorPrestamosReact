@@ -51,7 +51,7 @@ function App() {
   const handleClickDecrementoPlazo = () => {
     const valor = plazo - STEPPlazo;
 
-    if(valor < MIN) {
+    if(valor < MINPlazo) {
       alert('Monto no válido');
       return;
     }
@@ -62,7 +62,7 @@ function App() {
   const handleClickIncrementoPlazo = () => {
     const valor = plazo + STEPPlazo;
 
-    if(valor > MAX) {
+    if(valor > MAXPlazo) {
       alert('Monto no válido');
       return;
     }
@@ -133,7 +133,7 @@ function App() {
       
       <table className='table-fixed w-full mt-5'>
         <thead>
-          <tr className='text-3xl font-extrabold text-verde text-center'>
+          <tr className='text-3xl font-extrabold text-verde text-center max-sm:text-lg'>
             <th className='w-1/3'>
               Monto:
             </th>
@@ -146,7 +146,7 @@ function App() {
           </tr>
         </thead>
           <tbody>
-            <tr className='text-center text-2xl text-fuerte font-bold'>
+            <tr className='text-center text-2xl text-fuerte font-bold max-sm:text-lg'>
               <td>
                 {formatearDinero(cantidad)}
               </td>
